@@ -1,2 +1,2 @@
-# petty-math
-These demos are written for petty math。
+# Petty Math
+A collection of math code snippets by Javascript, resources and shiny things.
