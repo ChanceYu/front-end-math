@@ -1,4 +1,4 @@
-# Math Code Snippets :zero::one::two::three::four::five::six::seven::eight::nine::keycap_ten:
+# Math Code Snippets :1234: :capital_abcd:
 A collection of math code snippets written in [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), resources and shiny things. By [ChanceYu](http://yzq.ren).
 
 
