@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    html, body{
+        background: #f5f5f5;
+    }
+    .dot{
+        width: 4px;
+        height: 4px;
+        display: inline-block;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        background: red;
+        position: absolute;
+    }
+    .a{
+        left: 100px;
+        top: 50px;
+    }
+    .b{
+        left: 500px;
+        top: 400px;
+    }
+    .line{
+        background: green;
+    }
+    </style>
+</head>
+<body>
+    <span class="dot a" id="dot-a">A</span>
+    <span class="dot b" id="dot-b">B</span>
+
+    <script type="text/javascript">
+    var A = document.getElementById('dot-a');
+    var B = document.getElementById('dot-b');
+
+    var ARect = A.getBoundingClientRect();
+    var BRect = B.getBoundingClientRect();
+
+    //y = ax + b;
+    //a = (y2 - y1)/(x2 - x1);
+    
+    var a = (-BRect.top - (-ARect.top)) / (BRect.left - ARect.left);
+    var b = -ARect.top - a * ARect.left;
+
+
+    //开始画线
+    var i = ARect.left + ARect.width / 2;
+    var fragment = document.createDocumentFragment();
+
+    for(; i < BRect.left; i++){
+        var dot = document.createElement('span');
+        var y = Math.abs(a * i + b);
+
+        dot.className = 'dot line';
+        dot.style.left = i + 'px';
+        dot.style.top = y + 'px';
+
+        fragment.appendChild(dot);
+    }
+
+    document.body.appendChild(fragment);
+    </script>
+</body>
+</html>
