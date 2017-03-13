@@ -21,43 +21,11 @@ HTML结构：
 <span class="dot b" id="dot-b">B</span>
 ```
 
-CSS样式：
-```css
-*{
-    padding: 0;
-    margin: 0;
-}
-html, body{
-    background: #f5f5f5;
-}
-.dot{
-    width: 4px;
-    height: 4px;
-    display: inline-block;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    background: red;
-    position: absolute;
-}
-.a{
-    left: 100px;
-    top: 50px;
-}
-.b{
-    left: 500px;
-    top: 400px;
-}
-.line{
-    background: green;
-}
-```
-
 咱们先来温习一下知识点：函数 y = ax + b 是直线的标准公式，a 表示的是直线的斜率，而两点之间的直线斜率 a = (y2 - y1)/(x2 - x1)；我们已经知道了A、B两点，那么就能求得 a 斜率是多少，那么 b 也自然而然求出来了。
 
-我们先让A点表示为(x1, y1)，B点为(x2, y2)；在JavaScript中获取元素的位置信息，用`getBoundingClientRect`方法，它返回元素的`width、height、left、top、right、bottom`。下面开始上代码：
+我们先让A点表示为(x1, y1)，B点为(x2, y2)；先求出这两点的 x 和 y 分别是多少，这里我们不难想象，x 表示的就是网页元素离浏览器左边的距离，而 y 表示的就是元素离浏览器顶部的距离。
+
+JavaScript中获取元素的位置信息，用`getBoundingClientRect`方法，它返回元素的位置信息，包括`width、height、left、top、right、bottom`。下面开始上代码：
 
 ```javascript
 var A = document.getElementById('dot-a');
@@ -94,4 +62,6 @@ document.body.appendChild(fragment);
 
 ![两点之间画直线](../assets/img/basis-04-3.png)
 
-注意：由于这里将网页的左上角看成是坐标系中的(0, 0)原点，所以要将两点的 y 值变成负的，而最后生成点`dot`的时候又要将 y 值变成正的，来显示在网页中。你秒懂了么？:wink:
+注意：由于这里将网页的左上角看成是坐标系中的(0, 0)原点，所以要将两点的 y 值变成负的，而最后生成点`dot`的时候又要将 y 值变成正的，来显示在网页中。你秒懂了么？:wink: 
+
+有兴趣的可以看看[源码](04_linear-equation-with-one-unknown.html)
