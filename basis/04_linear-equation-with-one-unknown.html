@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title></title>
     <style type="text/css">
     *{
         padding: 0;
@@ -34,6 +34,17 @@
     .line{
         background: green;
     }
+    .line-rotate{
+        display: block;
+        height: 4px;
+        background: blue;
+        position: absolute;
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -o-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
     </style>
 </head>
 <body>
@@ -54,22 +65,64 @@
     var b = -ARect.top - a * ARect.left;
 
 
-    //开始画线
-    var i = ARect.left + ARect.width / 2;
-    var fragment = document.createDocumentFragment();
+    //方法一：通过点画线
+    var createLineByDot = function(){
+        var i = ARect.left + ARect.width / 2;
+        var fragment = document.createDocumentFragment();
 
-    for(; i < BRect.left; i++){
-        var dot = document.createElement('span');
-        var y = Math.abs(a * i + b);
+        for(; i < BRect.left; i++){
+            var dot = document.createElement('span');
+            var y = Math.abs(a * i + b);
 
-        dot.className = 'dot line';
-        dot.style.left = i + 'px';
-        dot.style.top = y + 'px';
+            dot.className = 'dot line';
+            dot.style.left = i + 'px';
+            dot.style.top = y + 'px';
 
-        fragment.appendChild(dot);
-    }
+            fragment.appendChild(dot);
+        }
 
-    document.body.appendChild(fragment);
+        document.body.appendChild(fragment);
+    };
+
+    //方法二：通过rotate旋转画线
+    var createLineByRotate = function(){
+        var dis = Math.sqrt( Math.pow(ARect.left - BRect.left, 2) +  Math.pow(-ARect.top + BRect.top, 2));
+
+        var line = document.createElement('span');
+        var angle = getAngle(ARect.left, -ARect.top, BRect.left, -BRect.top);
+
+        line.className = 'line-rotate';
+        line.style.width = dis + 'px';
+        line.style.left = ARect.left + 'px';
+        line.style.top = ARect.top + 'px';
+        line.style.transform = 'rotate(' + Math.abs(angle) + 'deg)';
+
+        document.body.appendChild(line);
+    };
+
+    //获取两点之间连线的角度
+    function getAngle(x1, y1, x2, y2) {
+        var disX = x2 - x1;
+        var disY = y2 - y1;
+
+        var len = Math.sqrt(Math.pow(disX, 2) + Math.pow(disY, 2));
+
+        var cos = disX / len;
+        var radian = Math.acos(cos);
+
+        var angle = 180 / (Math.PI / radian);
+
+        if (disY < 0) {
+            angle = -angle;
+        } else if ((disY == 0) && (disX < 0)) {
+            angle = 180;
+        }
+        return angle;
+    };
+
+    //run 执行
+    // createLineByDot();
+    createLineByRotate();
     </script>
 </body>
 </html>
