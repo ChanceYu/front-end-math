@@ -6,7 +6,7 @@ A collection of mathematics code snippets written in [JavaScript](https://develo
     * [质数](basis/01_prime-number.md)
     * [整数](basis/02_integer.md)
     * [科学计数法](basis/03_exponential.md)
-    * [一元一次方程](basis/04_linear-equation-with-one-unknown.md)
+    * [一次函数与一元一次方程](basis/04_linear-equation-with-one-unknown.md)
 * 场景案例
     * [九九乘法表](example/01_multiplication-table.md)
 

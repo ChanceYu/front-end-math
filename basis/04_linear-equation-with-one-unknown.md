@@ -1,4 +1,4 @@
-# 一元一次方程
+# 一次函数与一元一次方程
 > 一元一次方程（linear equation with one unknown），只含有一个未知数、未知数的最高次数为1且两边都为整式的等式叫做一元一次方程，使方程左右两边的值相等的未知数的值，叫做方程的解（solution）也叫做方程的根。其标准形式为 ax = b（a≠0），一般形式为 ax + b = 0（a ≠ 0）。[百度百科](http://baike.baidu.com/link?url=KMueA0DyFaffyqqkjnZ8-su9XKAXV7lFke5SmZxb82M6pW-rR6tq3g4zrrQ47_q67vHGwltAT37HY6kk7zMZHkr2Xu_xGS7V3xnE6_cPBfQx9F61DedaFIYof_pSt6wGd0p45YXNHsIvWdpRjUpnna)
 
 * 满足条件
