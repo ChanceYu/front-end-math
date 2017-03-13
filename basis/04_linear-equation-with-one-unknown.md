@@ -89,7 +89,7 @@ span{
 
 
 ```javascript
-//获取两点之间连线的角度
+//获取两点共同直线的角度
 function getAngle(x1, y1, x2, y2) {
     var disX = x2 - x1;
     var disY = y2 - y1;
