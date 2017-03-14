@@ -10,7 +10,7 @@
 ### 勾股定理
 页面中有 AB 两个点，那么我们设两点坐标 A(x1, y1)、B(x2, y2)。我们可以将 AB 的连线看成一个直角三角形的斜边，图中 C 为直角三角形的直角。现在我们已知 A、B 两点的坐标，那么边长 BC 就是 |x1 - x2|，边长 AC 就是 |y1 - y2|。
 
-那么根据[勾股定理](http://baike.baidu.com/link?url=ciDltiPXjII5DYE-KByq5G3rYWueLBOpMwDz3BjgfzRVvmI2YX0KP7CzmNNnke2KUJgMwpbq13of5U1alv1fA_dK37sAENPWmAg0NyjTNOckFDtfGeWoeSRVQ7SMbVWv) <img src="../assets/img/example_02_2.png" style="vertical-align:middle;">，斜边 AB 就求得公式为 <img src="../assets/img/example_02_1.png" style="vertical-align:middle;">。
+那么根据[勾股定理](http://baike.baidu.com/link?url=ciDltiPXjII5DYE-KByq5G3rYWueLBOpMwDz3BjgfzRVvmI2YX0KP7CzmNNnke2KUJgMwpbq13of5U1alv1fA_dK37sAENPWmAg0NyjTNOckFDtfGeWoeSRVQ7SMbVWv)![求两点之间的距离](../assets/img/example_02_2.png)，斜边 AB 就求得公式为 <img align="middle" src ="../assets/img/example_02_1.png" />。
 
 已知公式我们用代码的形式列出方法：
 
@@ -31,6 +31,6 @@ function getDistanceBetweenTwoPoints(x1, y1, x2, y2){
 `Math.sqrt`方法是求平方根号，`Math.pow(n, 2)`是求一个数的平方。上面的的方法就是根据两点的坐标求得两点的距离。
 
 ### 一次函数
-除了根据勾股定理之外，我们还可以根据一次函数的来得到相同的道理，将斜边 AB 看成一个一次函数 y = kx + b，将 A、B 两点的坐标代入，我们就可以得到<img src="../assets/img/example_02_4.png" style="vertical-align:middle;">。
+除了根据勾股定理之外，我们还可以根据一次函数的来得到相同的道理，将斜边 AB 看成一个一次函数 y = kx + b，将 A、B 两点的坐标代入，我们就可以得到![求两点之间的距离](../assets/img/example_02_4.png)。
 
 到这里真是感叹，数学真是博大精深啊，古人诚不欺我！
