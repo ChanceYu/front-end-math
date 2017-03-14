@@ -1,3 +1,4 @@
+<style type="text/css">img{vertical-align: middle;} </style>
 # 求两点之间的距离
 看到标题仿佛想起以前数学课堂的美好回忆啊，有木有？还真是！我的数学一直很菜，到现在很多知识点基本就忘光了。:joy:
 
