@@ -28,7 +28,7 @@
     return result;
  }
 ```
-运行函数`getPrimeNumber`求得`100`以内的所有质数：
+运行函数`getPrimeNumber`求得 100 以内的所有质数：
 
 ```javascript
 > getPrimeNumber(100)

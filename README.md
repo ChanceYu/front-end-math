@@ -9,6 +9,7 @@ A collection of mathematics code snippets written in [JavaScript](https://develo
     * [一次函数与一元一次方程](basis/04_linear-equation-with-one-unknown.md)
 * 场景案例
     * [九九乘法表](example/01_multiplication-table.md)
+    * [求两点之间的距离](example/02_get-length-between-two-points.md)
 
 # License
 And of course:
