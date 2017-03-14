@@ -1,4 +1,4 @@
-# Front End Math :1234: :capital_abcd:
+# :sparkles: Front End Math :sparkles: :pencil2::100::+1:
 A collection of mathematics code snippets written in [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript), [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), and other front-end technologies. By [ChanceYu](http://yzq.ren).
 
 
