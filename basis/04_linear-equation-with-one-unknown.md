@@ -36,29 +36,31 @@ var B = document.getElementById('dot-b');
 var ARect = A.getBoundingClientRect();
 var BRect = B.getBoundingClientRect();
 
-//y = ax + b;
-//a = (y2 - y1)/(x2 - x1);
+var createLineByDot = function(){
+    //y = ax + b;
+    //a = (y2 - y1)/(x2 - x1);
+    var a = (-BRect.top - (-ARect.top)) / (BRect.left - ARect.left);
+    var b = -ARect.top - a * ARect.left;
 
-var a = (-BRect.top - (-ARect.top)) / (BRect.left - ARect.left);
-var b = -ARect.top - a * ARect.left;
+    var i = ARect.left + ARect.width / 2;
+    var fragment = document.createDocumentFragment();
 
+    for(; i < BRect.left; i++){
+        var dot = document.createElement('span');
+        var y = Math.abs(a * i + b);
 
-//开始画线
-var i = ARect.left + ARect.width / 2;
-var fragment = document.createDocumentFragment();
+        dot.className = 'dot line';
+        dot.style.left = i + 'px';
+        dot.style.top = y + 'px';
 
-for(; i < BRect.left; i++){
-    var dot = document.createElement('span');
-    var y = Math.abs(a * i + b);
+        fragment.appendChild(dot);
+    }
 
-    dot.className = 'dot line';
-    dot.style.left = i + 'px';
-    dot.style.top = y + 'px';
+    document.body.appendChild(fragment);
+};
 
-    fragment.appendChild(dot);
-}
-
-document.body.appendChild(fragment);
+//执行
+createLineByDot();
 ```
 最终的效果如下图：
 
@@ -85,14 +87,14 @@ span{
 * 知识点
     * `transform-origin`改变元素的旋转基点位置
     * 求两点之间的距离 [[参考](../example/02_get-length-between-two-points.md)]
-    * 求两直线的夹角
+    * 求直角三角形的角度 [[参考](../example/03_get-angle-of-triangle.md)]
     * 三角函数的运用
     * 弧度与角度的换算
 
 都是以前的数学知识点啊！有点懵有木有？:scream:
 
 ```javascript
-//获取两点共同直线的角度
+//求直角三角形的角度
 function getAngle(x1, y1, x2, y2) {
     var disX = x2 - x1;
     var disY = y2 - y1;
@@ -102,14 +104,15 @@ function getAngle(x1, y1, x2, y2) {
     var cos = disX / len;
     var radian = Math.acos(cos);
 
-    var angle = 180 / (Math.PI / radian);
+    var angle = radian * 180 / Math.PI;
 
     if (disY < 0) {
         angle = -angle;
     } else if ((disY == 0) && (disX < 0)) {
         angle = 180;
     }
-    return angle;
+
+    return Math.round(angle)
 };
 ```
 

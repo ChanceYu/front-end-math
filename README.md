@@ -9,3 +9,4 @@
 * 场景案例
     * [九九乘法表](example/01_multiplication-table.md)
     * [求两点之间的距离](example/02_get-length-between-two-points.md)
+    * [求直角三角形的角度](example/03_get-angle-of-triangle.md)

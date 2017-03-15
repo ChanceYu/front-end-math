@@ -58,15 +58,13 @@
     var ARect = A.getBoundingClientRect();
     var BRect = B.getBoundingClientRect();
 
-    //y = ax + b;
-    //a = (y2 - y1)/(x2 - x1);
-    
-    var a = (-BRect.top - (-ARect.top)) / (BRect.left - ARect.left);
-    var b = -ARect.top - a * ARect.left;
-
-
     //方法一：通过点画线
     var createLineByDot = function(){
+        //y = ax + b;
+        //a = (y2 - y1)/(x2 - x1);
+        var a = (-BRect.top - (-ARect.top)) / (BRect.left - ARect.left);
+        var b = -ARect.top - a * ARect.left;
+
         var i = ARect.left + ARect.width / 2;
         var fragment = document.createDocumentFragment();
 
@@ -91,16 +89,24 @@
         var line = document.createElement('span');
         var angle = getAngle(ARect.left, -ARect.top, BRect.left, -BRect.top);
 
+        angle = Math.abs(angle);
+
+        var rotateStyle = 'rotate(' + angle + 'deg)';
+
         line.className = 'line-rotate';
         line.style.width = dis + 'px';
         line.style.left = ARect.left + 'px';
         line.style.top = ARect.top + 'px';
-        line.style.transform = 'rotate(' + Math.abs(angle) + 'deg)';
+        line.style.webkitTransform = rotateStyle;
+        line.style.MozTransform = rotateStyle;
+        line.style.msTransform = rotateStyle;
+        line.style.OTransform = rotateStyle;
+        line.style.transform = rotateStyle;
 
         document.body.appendChild(line);
     };
 
-    //获取两点共同直线的角度
+    //求直角三角形的角度
     function getAngle(x1, y1, x2, y2) {
         var disX = x2 - x1;
         var disY = y2 - y1;
@@ -110,17 +116,18 @@
         var cos = disX / len;
         var radian = Math.acos(cos);
 
-        var angle = 180 / (Math.PI / radian);
+        var angle = radian * 180 / Math.PI;
 
         if (disY < 0) {
             angle = -angle;
         } else if ((disY == 0) && (disX < 0)) {
             angle = 180;
         }
-        return angle;
+        
+        return Math.round(angle)
     };
 
-    //run 执行
+    //执行
     // createLineByDot();
     createLineByRotate();
     </script>
