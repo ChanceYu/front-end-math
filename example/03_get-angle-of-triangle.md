@@ -51,7 +51,7 @@ angleA = 180 / Math.PI * Math.acos( b / c );
 求两点距离公式为：<img align="center" src="../assets/img/example_02_1.png">
 
 
-最后我们得到公式：<img align="center" src="../assets/img/example_03_1.png">
+最后得到角度公式：<img align="center" src="../assets/img/example_03_1.png">
 
 ```javascript
 var x1 = 100;
