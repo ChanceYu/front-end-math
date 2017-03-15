@@ -62,11 +62,50 @@ var y2 = -400;
 var b = Math.abs(y1 - y2);//求b 边长度
 var c = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));//求c 边长度
 
-var radian = Math.acos(b / c);//求弧度
+var radianA = Math.acos(b / c);//求弧度
 
-var angleA = 180 / Math.PI * radian;//弧度转角度
+var angleA = 180 / Math.PI * radianA;//弧度转角度
 
 angleA = Math.round(angleA);//49
 ```
 
-这样角 A 的度数就求出来了~ 大功告成！上面是用余弦函数来计算的，当然也可以用正弦函数来计算了。这里之所以用余弦函数，那是因为角 A 的两条边是 b 和 c，这样计算起来更加方便。有兴趣的可以研究用正弦函数 sinA = a / c，来试试！
+这样角 A 的度数就求出来了~ 大功告成！最后将其整理成一个求角度的函数
+```javascript
+var getAngle = function(A, B){
+    var x1 = A.x;
+    var y1 = A.y;
+    var x2 = B.x;
+    var y2 = B.y;
+    
+    var disX = x1 - x2;
+    var disY = y1 - y2;
+
+    if(disX === 0 || disY === 0){
+        throw new Error('该两点相交的直线无法与水平轴或垂直轴构成三角形');
+    }
+
+    var a = Math.abs(disX);
+    var b = Math.abs(disY);
+    var c = Math.sqrt(Math.pow(disX, 2) + Math.pow(disY, 2));
+
+    var randian2Angle = function(scale){
+        var radian = Math.acos(scale);
+
+        var angle = 180 / Math.PI * radian;
+
+        return Math.round(angle);
+    }
+
+    var angleA = randian2Angle(b / c);
+    var angleB = randian2Angle(a / c);
+
+    return {
+        A: angleA,
+        B: angleB,
+        C: 90
+    }
+}
+```
+上面函数是基于网页中的两点，来求两点相交直线与水平轴和垂直轴的角度（形成直角三角形，直角位于直线下方）。
+
+上面是用余弦函数来计算的，当然也可以用正弦函数来计算了。这里之所以用余弦函数，那是因为角 A 的两条边是 b 和 c，这样计算起来更加方便。有兴趣的可以研究用正弦函数 sinA = a / c，来试试！
