@@ -48,7 +48,7 @@ angleA = 180 / Math.PI * Math.acos( b / c );
 ```
 上面 a、b、c 分别表示的是三角形的三边。接下来不难看出，要想计算角 A 的度数，先得计算斜边 c 和临边 b 的长度。b 的长度很好求，就是 AB 两点的 y 坐标值（top）相减就得到了。而我们已经知道了 AB 两点的坐标，也就能根据两点坐标公式求斜边 c 的长度。
 
-求两点距离坐标公式为：<img align="center" src="../assets/img/example_02_1.png">
+求两点距离公式为：<img align="center" src="../assets/img/example_02_1.png">
 
 
 最后我们得到公式：<img align="center" src="../assets/img/example_03_1.png">
