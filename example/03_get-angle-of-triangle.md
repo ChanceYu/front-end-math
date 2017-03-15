@@ -76,19 +76,17 @@ var getAngle = function(A, B){
     var y1 = A.y;
     var x2 = B.x;
     var y2 = B.y;
-    
-    var disX = x1 - x2;
-    var disY = y1 - y2;
 
-    if(disX === 0 || disY === 0){
+    var a = Math.abs(x1 - x2);
+    var b = Math.abs(y1 - y2);
+
+    if(a === 0 || b === 0){
         throw new Error('该两点相交的直线无法与水平轴或垂直轴构成三角形');
     }
 
-    var a = Math.abs(disX);
-    var b = Math.abs(disY);
-    var c = Math.sqrt(Math.pow(disX, 2) + Math.pow(disY, 2));
+    var c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 
-    var randian2Angle = function(scale){
+    var randianToAngle = function(scale){
         var radian = Math.acos(scale);
 
         var angle = 180 / Math.PI * radian;
@@ -96,8 +94,8 @@ var getAngle = function(A, B){
         return Math.round(angle);
     }
 
-    var angleA = randian2Angle(b / c);
-    var angleB = randian2Angle(a / c);
+    var angleA = randianToAngle(b / c);
+    var angleB = randianToAngle(a / c);
 
     return {
         A: angleA,
