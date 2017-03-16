@@ -1,7 +1,7 @@
 # :sparkles: Front End Math :sparkles: :pencil2::100::+1: [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badge/) [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php) 
 使用 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)、HTML、CSS，以及其它前端技术整理的一个与数学有关的代码片段集合与案例展示。
     
-* 数学基础
+* 基础概念
     * [质数](basis/01_prime-number.md)
     * [整数](basis/02_integer.md)
     * [科学计数法](basis/03_exponential.md)
