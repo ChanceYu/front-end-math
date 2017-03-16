@@ -116,4 +116,4 @@ function getAngle(x1, y1, x2, y2) {
 };
 ```
 
-详尽内容请参考[源码](04_linear-equation-with-one-unknown.html)
+详尽内容请参考[源码](04_linear-equation-with-one-unknown_demo.html)
