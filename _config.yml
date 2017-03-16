@@ -1,32 +1,13 @@
 #Site config
 username: ChanceYu
-title: Front End Math - By ChanceYu
+title: Front End Math
 description: 使用 JavaScript、HTML、CSS，以及其它前端技术整理的一个与数学有关的代码片段集合与案例展示。
 keywords: front-end math ChanceYu 数学
 url: /
 feed: 
-favicon: http://yzq.ren/assets/img/favicon.ico
 theme: jekyll-theme-cayman
 
 
 # Build settings
 gems:
   - jemoji
-
-
-#Author config
-author:
-    name: ChanceYu
-    email: i.fish@foxmail.com
-    imageLink: 
-    simpleIntro: I'm ChanceYu
-    detailIntro:
-      <p>Front End Math 是一个使用 JavaScript、HTML、CSS，以及其它前端技术整理的一个与数学有关的代码片段集合与案例展示。</p>
-
-
-#Follow me
-follow:
-  - class: icon-rss
-    url: http://yzq.ren
-  - class: icon-github-alt
-    url: https://github.com/ChanceYu
