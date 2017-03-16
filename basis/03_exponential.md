@@ -1,5 +1,5 @@
 # 科学计数法
-> 这是一种记数的方法。把一个数字记为 a×10^n 的形式（1≤|a|<10，n为整数），这种记数法叫做科学记数法。例如 19971400000000=1.99714×10^13。计算器或电脑表达 10 的幂是一般是用 E 或 e，也就是 1.99714E13=19971400000000。[百度百科](http://baike.baidu.com/link?url=ceNgXqWhsqOKhO4v-WnTWC5byHTmOEjHRqVau_eCMgldqda1JroARITHCXGkV1y_Q4z4BEQ9mPJF8oMArPZdf18474YT065TO76QJYXlH-tSwbW0ponAnz-icZrGQM7XNGsTcHg3xZzi0U8sqM6ZSXu6jPqcyvV9Zvg4Iso7FizUQrNOgvYpnCshajS-u9MMjPzholwJ9R8WXh_H7USPYSKrKXiGekzr4m0pC_kG7JK)
+> 这是一种记数的方法。把一个数字记为 a×10^n 的形式（1≤&#124;a&#124;<10，n为整数），这种记数法叫做科学记数法。例如 19971400000000=1.99714×10^13。计算器或电脑表达 10 的幂是一般是用 E 或 e，也就是 1.99714E13=19971400000000。[百度百科](http://baike.baidu.com/link?url=ceNgXqWhsqOKhO4v-WnTWC5byHTmOEjHRqVau_eCMgldqda1JroARITHCXGkV1y_Q4z4BEQ9mPJF8oMArPZdf18474YT065TO76QJYXlH-tSwbW0ponAnz-icZrGQM7XNGsTcHg3xZzi0U8sqM6ZSXu6jPqcyvV9Zvg4Iso7FizUQrNOgvYpnCshajS-u9MMjPzholwJ9R8WXh_H7USPYSKrKXiGekzr4m0pC_kG7JK)
 
 而在JavaScript中有一个方法能将数字转化为科学计数法，那就是[toExponential](http://www.w3school.com.cn/jsref/jsref_toexponential.asp)。
 
