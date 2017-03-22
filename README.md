@@ -1,4 +1,6 @@
-<p align="center"><h1>Front-End Math</h1></p>
+# Front-End Math
+
+> 从前端的角度来解释数学中的概念，使用前端的技术展示数学中的知识点。
 
 ***
 
@@ -6,7 +8,6 @@
 
 ***
 
-    
 * 基础概念
     * [质数](basis/01_prime-number.md)
     * [整数](basis/02_integer.md)
@@ -18,4 +19,5 @@
     * [求直角三角形的角度](example/03_get-angle-of-triangle.md)
 
 ## License
+
 [![](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php) 
