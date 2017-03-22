@@ -1,6 +1,6 @@
 #Site config
 username: ChanceYu
-title: "Front End Math"
+title: ""
 description: "使用 JavaScript、HTML、CSS，以及其它前端技术整理的一个与数学有关的代码片段集合与案例展示。"
 theme: jekyll-theme-cayman
 
