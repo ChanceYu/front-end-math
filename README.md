@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/icon/icon_400.png" alt="Front-End Math"></p>
+<p align="center"><h1>Front-End Math</h1></p>
 
 ***
 
