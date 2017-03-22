@@ -1,10 +1,10 @@
 # Front-End Math
 
-> 从前端的角度来解释数学中的概念，使用前端的技术展示数学中的知识点。
+> 从前端的角度来解释数学中的概念，使用 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)、HTML、CSS，以及其它前端技术展示数学中的知识点。
 
 ***
 
-<p align="center">:sparkles: 前端数学 :sparkles:<br>使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>、HTML、CSS，以及其它前端技术整理的一个与数学有关的代码片段集合与案例展示。</p>
+<p align="center">:sparkles: 前端数学 :sparkles:<br>一个与数学有关的代码片段集合与案例展示。</p>
 
 ***
 
