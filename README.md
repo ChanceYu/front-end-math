@@ -2,7 +2,7 @@
 
 ***
 
-<p align="center">:100:<br>:sparkles: 前端数学 :sparkles:<br>使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>、HTML、CSS，以及其它前端技术整理的一个与数学有关的代码片段集合与案例展示。</p>
+<p align="center">:sparkles: 前端数学 :sparkles:<br>使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>、HTML、CSS，以及其它前端技术整理的一个与数学有关的代码片段集合与案例展示。</p>
 
 ***
 
