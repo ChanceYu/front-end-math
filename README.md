@@ -20,4 +20,4 @@
 
 ## License
 
-[![](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php) 
+[![](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php) 
